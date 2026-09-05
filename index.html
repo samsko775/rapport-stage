@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sami El Abdallaoui — Rapport d'activité professionnelle</title>
+<meta name="description" content="Rapport d'activité professionnelle — stage chez OpenCyberAI, juin-juillet 2026. Bachelor 2 Cybersécurité, Ynov Campus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --encre:#14263F;
+  --encre-clair:#25344A;
+  --papier:#EDF0F3;
+  --surface:#FFFFFF;
+  --trait:#C3CDD9;
+  --gris:#5A6B80;
+  --carmin:#A81941;
+  --vert:#10695C;
+  --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --nav:250px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--papier);color:var(--encre-clair);
+  font-family:var(--sans);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--carmin)}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--encre);font-weight:600;margin:0}
+p{margin:0 0 1em}
+:focus-visible{outline:2.5px solid var(--carmin);outline-offset:3px}
+
+/* ── index latéral ───────────────────────────────────────────── */
+.index{
+  position:fixed;inset:0 auto 0 0;width:var(--nav);
+  border-right:1px solid var(--trait);background:var(--papier);
+  padding:34px 26px;display:flex;flex-direction:column;gap:26px;z-index:20;
+  overflow-y:auto;
+}
+.sceau{font-family:var(--serif);font-size:17px;color:var(--encre);line-height:1.25}
+.sceau span{display:block;font-family:var(--sans);font-size:11.5px;color:var(--gris);margin-top:6px;line-height:1.45}
+.index ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.index a{
+  display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:baseline;
+  text-decoration:none;color:var(--gris);font-size:13.5px;padding:5px 0;
+  border-bottom:1px solid transparent;transition:color .15s;
+}
+.index a i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--trait)}
+.index a:hover{color:var(--encre)}
+.index a[aria-current="true"]{color:var(--carmin);font-weight:500}
+.index a[aria-current="true"] i{color:var(--carmin)}
+.index footer{margin-top:auto;font-size:11.5px;color:var(--gris);line-height:1.5}
+.index footer a{color:var(--gris)}
+
+/* ── conteneur ───────────────────────────────────────────────── */
+.page{margin-left:var(--nav);padding:0 clamp(24px,5vw,80px)}
+.col{max-width:68ch;margin:0 auto}
+section{padding:72px 0;border-top:1px solid var(--trait)}
+section:first-of-type{border-top:0}
+
+/* ── hero ────────────────────────────────────────────────────── */
+.hero{padding:clamp(64px,11vh,120px) 0 68px;border-top:0}
+.hero .logo{width:46px;height:46px;border-radius:9px;display:block;margin:0 0 26px}
+.hero .role{font-size:13px;color:var(--carmin);letter-spacing:.04em;margin:0 0 20px;font-weight:500}
+.hero h1{
+  font-size:clamp(42px,7.4vw,76px);line-height:1.02;letter-spacing:-.022em;
+  margin:0 0 22px;
+}
+.hero h1 .n2{display:block}
+.rule{height:3px;background:var(--carmin);width:76px;margin:0 0 26px}
+.hero .lede{font-family:var(--serif);font-size:clamp(17px,2vw,20px);line-height:1.55;color:var(--encre);max-width:34ch;margin:0 0 40px}
+.anim{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
+.anim:nth-child(2){animation-delay:.06s}.anim:nth-child(3){animation-delay:.11s}
+.anim:nth-child(4){animation-delay:.16s}.anim:nth-child(5){animation-delay:.21s}
+.anim:nth-child(6){animation-delay:.27s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.anim{opacity:1;transform:none;animation:none}}
+
+/* fiche d'identité */
+.fiche{border-top:2px solid var(--encre);margin-top:8px}
+.fiche div{display:grid;grid-template-columns:132px 1fr;gap:18px;padding:11px 0;border-bottom:1px solid var(--trait)}
+.fiche dt{font-size:12px;color:var(--gris);font-weight:500;padding-top:2px}
+.fiche dd{margin:0;font-size:15px;color:var(--encre)}
+dl.fiche{margin:0}
+
+/* ── typographie de section ──────────────────────────────────── */
+section>.col>h2{font-size:clamp(26px,3.6vw,34px);line-height:1.15;letter-spacing:-.015em;margin-bottom:10px}
+.deck{font-family:var(--serif);font-style:italic;color:var(--gris);font-size:17px;line-height:1.6;margin:0 0 34px;max-width:52ch}
+h3{font-size:19px;margin:36px 0 10px}
+h4{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--vert);margin:24px 0 8px}
+
+/* listes */
+ul.puces{list-style:none;padding:0;margin:0 0 18px}
+ul.puces li{position:relative;padding-left:20px;margin-bottom:9px}
+ul.puces li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:1.5px;background:var(--carmin)}
+
+/* encadré */
+.encadre{background:var(--surface);border-left:3px solid var(--encre);padding:22px 24px;margin:26px 0}
+.encadre h4{margin-top:0}
+.encadre :last-child{margin-bottom:0}
+.encadre.vert{border-left-color:var(--vert)}
+.encadre.carmin{border-left-color:var(--carmin)}
+
+/* tableau des missions */
+.mission{border-top:1px solid var(--trait);padding:26px 0}
+.mission:first-of-type{border-top:2px solid var(--encre)}
+.mission h3{margin:0 0 4px;font-size:20px}
+.mission .tag{font-size:12px;color:var(--gris);margin-bottom:12px}
+.mission :last-child{margin-bottom:0}
+
+/* outils */
+.outils{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0;padding:0;list-style:none}
+.outils li{font-family:var(--mono);font-size:12px;color:var(--encre);background:var(--surface);border:1px solid var(--trait);padding:4px 9px}
+
+/* fiches de veille */
+.veilles{margin:30px 0 0;display:flex;flex-direction:column;gap:14px}
+.veille{
+  display:block;background:var(--surface);border:1px solid var(--trait);
+  border-left:3px solid var(--carmin);padding:20px 22px;text-decoration:none;color:inherit;
+  transition:border-color .15s;
+}
+.veille:hover,.veille:focus-visible{border-color:var(--encre);border-left-color:var(--carmin)}
+.veille .ref{font-family:var(--mono);font-size:11px;color:var(--gris);display:block;margin-bottom:6px}
+.veille h3{font-size:18px;margin:0 0 7px;line-height:1.3}
+.veille p{font-size:14.5px;color:var(--gris);margin:0 0 10px;line-height:1.55}
+.veille .ouvrir{font-size:12.5px;color:var(--carmin);font-weight:500}
+
+/* organigramme */
+.orga{background:var(--surface);border:1px solid var(--trait);padding:26px 24px;margin:26px 0}
+.orga .niv{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:9px 0}
+.orga .qui{flex:0 0 auto}
+.orga .niv+.niv{border-top:1px dashed var(--trait)}
+.orga .qui{font-weight:600;color:var(--encre);font-size:15px}
+.orga .quoi{font-size:13px;color:var(--gris)}
+.orga .moi{color:var(--carmin)}
+
+.tofill{background:#FDE9EE;border-bottom:1.5px dotted var(--carmin);color:var(--carmin);padding:0 3px;font-size:.94em}
+code{font-family:var(--mono);font-size:.88em;color:var(--encre);background:var(--surface);border:1px solid var(--trait);padding:1px 5px}
+
+/* citation / bilan */
+.temoin{
+  font-family:var(--serif);font-size:21px;line-height:1.5;color:var(--encre);
+  border-left:3px solid var(--carmin);padding:4px 0 4px 24px;margin:30px 0;max-width:46ch;
+}
+
+/* pied */
+.pied{border-top:2px solid var(--encre);padding:38px 0 70px;font-size:14px;color:var(--gris)}
+.pied strong{display:block;font-family:var(--serif);font-size:19px;color:var(--encre);font-weight:600;margin-bottom:6px}
+.pied a{color:var(--gris)}
+
+/* ── mobile ──────────────────────────────────────────────────── */
+@media (max-width:940px){
+  .index{
+    position:sticky;inset:0 auto auto 0;width:auto;flex-direction:row;
+    align-items:center;gap:18px;padding:12px 18px;overflow-x:auto;
+    border-right:0;border-bottom:1px solid var(--trait);
+    -webkit-overflow-scrolling:touch;
+  }
+  .sceau{font-size:15px;white-space:nowrap}
+  .sceau span{display:none}
+  .index ol{flex-direction:row;gap:16px}
+  .index a{grid-template-columns:auto;white-space:nowrap;font-size:13px;padding:2px 0}
+  .index a i{display:none}
+  .index footer{display:none}
+  .page{margin-left:0;padding:0 22px}
+  section{padding:54px 0}
+  .fiche div{grid-template-columns:1fr;gap:2px;padding:10px 0}
+}
+</style>
+</head>
+<body>
+
+<nav class="index" aria-label="Plan du rapport">
+  <div class="sceau">Sami El&nbsp;Abdallaoui
+    <span>Rapport d’activité professionnelle<br>Bachelor 2 Cybersécurité</span>
+  </div>
+  <ol>
+    <li><a href="#contexte"><i>1</i>Cadre du stage</a></li>
+    <li><a href="#entreprise"><i>2</i>L’entreprise et son marché</a></li>
+    <li><a href="#missions"><i>3</i>Mon rôle et mes missions</a></li>
+    <li><a href="#cours"><i>4</i>Contenus pédagogiques</a></li>
+    <li><a href="#scenarios"><i>5</i>Conception de scénarios</a></li>
+    <li><a href="#veille"><i>6</i>Veille technologique</a></li>
+    <li><a href="#equipe"><i>7</i>Équipe et organisation</a></li>
+    <li><a href="#competences"><i>8</i>Compétences mobilisées</a></li>
+    <li><a href="#bilan"><i>9</i>Bilan personnel</a></li>
+    <li><a href="#projet"><i>10</i>Projet professionnel</a></li>
+  </ol>
+  <footer>Ynov Campus<br>Juin – juillet 2026</footer>
+</nav>
+
+<main class="page">
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<section class="hero" id="contexte">
+  <div class="col">
+    <img class="logo anim" src="opencyberai.png" alt="OpenCyberAI" width="232" height="232">
+    <p class="role anim">Rapport d’activité professionnelle — Bachelor 2 Cybersécurité</p>
+    <h1 class="anim">Sami<span class="n2">El Abdallaoui</span></h1>
+    <div class="rule anim"></div>
+    <p class="lede anim">Deux mois en télétravail chez OpenCyberAI, dans une micro-structure où personne n’avait le temps de me donner du travail. Voici ce que j’en ai fait.</p>
+
+    <dl class="fiche anim">
+      <div><dt>Entreprise</dt><dd>OpenCyberAI</dd></div>
+      <div><dt>Localisation</dt><dd>Strasbourg (Grand Est) — stage réalisé intégralement à distance</dd></div>
+      <div><dt>Secteur</dt><dd>EdTech et cybersécurité — plateforme de simulation gamifiée assistée par IA</dd></div>
+      <div><dt>Durée</dt><dd>Du 1<sup>er</sup> juin au 31 juillet 2026, soit 2 mois, environ 44 jours ouvrés</dd></div>
+      <div><dt>Poste occupé</dt><dd>Stagiaire — veille technologique et contenus pédagogiques</dd></div>
+      <div><dt>Productions</dt><dd>5 fiches de veille, 4 fiches de cours Python, 6 scénarios pédagogiques</dd></div>
+      <div><dt>Tuteur entreprise</dt><dd>Armand Taheri</dd></div>
+      <div><dt>Formation</dt><dd>Bachelor 2 Cybersécurité, Ynov Campus Val d’Europe</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════════════════════ ENTREPRISE ══════════════════════════ -->
+<section id="entreprise">
+  <div class="col">
+    <h2>L’entreprise et son marché</h2>
+    <p class="deck">Une petite structure qui s’attaque à un problème simple à énoncer : la cybersécurité s’enseigne mal parce qu’elle s’enseigne à plat.</p>
+
+    <h3>Ce que fait OpenCyberAI</h3>
+    <p>OpenCyberAI développe une plateforme de formation immersive à la cybersécurité. Le principe n’est pas de proposer des cours suivis d’exercices, mais des simulations jouables : l’apprenant est placé dans une architecture informatique virtuelle et doit la protéger ou l’exploiter, avec des objectifs à atteindre, des ressources à gagner et une progression chiffrée.</p>
+    <p>La particularité du produit est son assistant intégré. Un mentor conversationnel accompagne le joueur pendant la partie, analyse ce qu’il fait et lui donne des orientations en temps réel. C’est ce qui distingue la plateforme d’un environnement de challenge classique, où l’apprenant reste seul face à l’énoncé. Un mode multijoueur permet également de faire s’affronter plusieurs participants.</p>
+    <p>Sur le plan juridique, l’activité est portée en France par la société CyberAI France, basée à Strasbourg, détenue par une structure de tête britannique, et dirigée par Armand Taheri, fondateur du projet. L’équipe est réduite, ce qui a une conséquence directe sur le stage : les périmètres sont larges, et un stagiaire touche à la fois au test, à la correction et à la rédaction de contenu. C’est aussi ce qui explique le format distanciel — l’équipe est distribuée, et l’essentiel de la coordination passe déjà par l’écrit.</p>
+
+    <h3>La structure du catalogue</h3>
+    <p>Le contenu est organisé en deux niveaux. Les <strong>chapitres</strong> couvrent un domaine — fondamentaux de la cybersécurité, familles d’attaques, sécurité des applications web, ingénierie sociale, rançongiciels, responsabilité sociétale — et regroupent de deux à treize leçons chacun. Les <strong>cours</strong>, plus courts, traitent un sujet précis : introduction à la cryptographie, analyse de maliciels, introduction à Python, réponse à une attaque par rançongiciel. Chaque entrée affiche un nombre de leçons, une difficulté et une progression.</p>
+    <p>Le catalogue est bilingue et la répartition n’est pas neutre : les contenus les plus récents et les plus longs sont en anglais, les parcours d’entrée en français. C’est une conséquence directe du double marché, et c’est aussi ce qui m’a conduit à travailler une partie de mes sources de veille en anglais.</p>
+    <p>Le catalogue conserve par ailleurs la trace des opérations événementielles : un chapitre est consacré au marathon cyber mené avec un grand opérateur télécom à VivaTech en 2024, conçu pour démystifier les fondamentaux auprès du grand public.</p>
+
+    <h3>Le marché et le positionnement</h3>
+    <p>Contrairement à ce que laisse penser l’aspect ludique du produit, l’entreprise ne vend pas à des particuliers. Son modèle est double, et les deux volets s’adressent à des organisations.</p>
+    <ul class="puces">
+      <li><strong>Le volet académique.</strong> Écoles d’ingénieurs, universités et bootcamps, à qui l’entreprise fournit des modules pédagogiques alignés sur des référentiels du secteur — le cadre du NIST et la matrice MITRE ATT&amp;CK. Cet alignement est l’argument commercial central : un établissement peut justifier que son enseignement couvre un référentiel reconnu.</li>
+      <li><strong>Le volet entreprise.</strong> Des simulations sur mesure destinées à entraîner des équipes déjà en poste — centres de supervision, tests d’intrusion, gouvernance — avec un accent mis sur la gestion de crise.</li>
+    </ul>
+    <p>Un troisième canal est venu s’ajouter aux deux premiers pendant que je faisais mes recherches, et c’est celui qui m’a le plus surpris : l’Éducation nationale. La plateforme a été référencée en octobre 2025 dans le dispositif Édu-Up, qui soutient la production de ressources numériques pour l’école, elle figure au catalogue 2026 d’un distributeur de ressources scolaires, et l’académie d’Aix-Marseille a publié des cas d’usage en classe. Le second degré n’est donc pas un marché théorique.</p>
+
+    <h3>Reconnaissance et diffusion</h3>
+    <p>Pour une structure de cette taille, la surface institutionnelle est notable, et elle explique une partie de l’exigence de qualité sur le produit.</p>
+    <ul class="puces">
+      <li><strong>Institutionnel</strong> — référencement dans le dispositif Édu-Up du ministère de l’Éducation nationale, présence au catalogue d’un distributeur de ressources scolaires, usages documentés par l’académie d’Aix-Marseille.</li>
+      <li><strong>Académique</strong> — partenariats avec la 3W Academy et l’université d’Amsterdam ; le centre de recherche en cybersécurité du RMIT a cité une collaboration dans ses travaux sur l’apprentissage gamifié.</li>
+      <li><strong>Écosystème startup</strong> — sélection dans la cohorte « AI for Education » de Google for Startups en janvier 2025, parmi vingt et une entreprises ; demi-finaliste d’un concours à Malte ; membre de l’initiative CyberFirst du NCSC britannique.</li>
+      <li><strong>Événementiel</strong> — organisation d’un marathon cyber à VivaTech avec un grand opérateur télécom.</li>
+    </ul>
+    <p>Cette exposition change la nature du travail de test. Un défaut sur un module référencé par le ministère et joué en classe ne se répare pas discrètement : il a été vu par un enseignant devant sa classe avant d’arriver jusqu’à l’équipe.</p>
+
+    <h3>La concurrence</h3>
+    <p>Quatre familles d’acteurs occupent le terrain, et aucune ne se place exactement là où l’entreprise se situe.</p>
+    <ul class="puces">
+      <li><strong>Les plateformes de challenges</strong> — Root-Me, TryHackMe, Hack The Box. Techniquement excellentes, mais conçues pour des pratiquants autonomes qui savent déjà où ils vont. Pas d’accompagnement pendant l’exercice, peu de progression structurée, et un coût d’entrée qui décourage un débutant.</li>
+      <li><strong>Les plateformes de cours généralistes</strong> — OpenClassrooms, France-IOI. Solides sur la programmation, faiblement gamifiées et peu orientées sécurité.</li>
+      <li><strong>L’offre institutionnelle</strong> — SecNumAcadémie de l’ANSSI, CyberEdu. Gratuite et fiable, mais tournée vers la sensibilisation générale, sans mise en situation ni évaluation exploitable par un établissement.</li>
+      <li><strong>Les acteurs anglophones</strong> — mieux financés, mais désalignés des programmes français et des attentes d’un établissement européen.</li>
+    </ul>
+    <p>Le créneau visé est donc l’intersection de trois exigences rarement réunies : une mise en situation réelle, un accompagnement pendant la partie, et un adossement à un référentiel qui permette à un établissement ou à une entreprise de justifier la formation dispensée.</p>
+
+    <div class="encadre">
+      <h4>Ce que cette position implique au quotidien</h4>
+      <p>Un produit vendu à des établissements n’a pas droit aux mêmes défauts qu’une application grand public. Un bug qui bloque une étape ne coûte pas un abandon : il coûte la crédibilité du contenu devant une classe entière, il se remonte à l’enseignant, qui le remonte au fournisseur. Une incohérence entre un énoncé et l’exercice n’est pas un détail cosmétique, c’est un contresens pédagogique dans un module censé couvrir un référentiel reconnu.</p>
+      <p>C’est précisément ce qui donne son poids au travail d’assurance qualité, et c’est ce qui a structuré la plus grande partie de mon stage.</p>
+    </div>
+
+    <p style="font-size:13.5px;color:var(--gris)"><em>Les éléments de positionnement, de clientèle, de structure et de reconnaissance proviennent des supports publics de l’entreprise, de ses références citées publiquement et des registres légaux. L’analyse concurrentielle et la lecture du marché sont personnelles et n’engagent pas OpenCyberAI.</em></p>
+  </div>
+</section>
+
+<!-- ══════════════════════════ MISSIONS ══════════════════════════ -->
+<section id="missions">
+  <div class="col">
+    <h2>Mon rôle et mes missions</h2>
+    <p class="deck">Le poste annoncé était large. La réalité l’a été davantage encore, mais dans un sens que je n’avais pas prévu : il n’y avait pas de commande.</p>
+
+    <p>Le cadrage initial était classique pour un stage de deuxième année : prendre en main la plateforme, contribuer à ses contenus, assurer une veille sur la sécurité. Dans une structure de dix personnes qui vend à des ministères et à des universités, il y a du travail. Ce qui manque, c’est le temps de le distribuer.</p>
+
+    <p>Mon tuteur dirige l’entreprise. Il répondait quand je le sollicitais, mais les sollicitations dans l’autre sens sont restées rares, et le télétravail intégral a supprimé le peu de transmission informelle qui aurait pu compenser. Concrètement : après les premiers jours, je me suis retrouvé avec un accès à la plateforme, un canal de discussion, et à peu près aucune tâche assignée.</p>
+
+    <div class="encadre carmin">
+      <h4>Le vrai sujet du stage</h4>
+      <p>Il y avait deux réponses possibles à cette situation. Attendre qu’on me donne quelque chose, en se disant que ça viendrait. Ou considérer que l’absence de commande était le problème à résoudre, et me construire un programme.</p>
+      <p>J’ai mis une dizaine de jours à choisir la seconde, et c’est la partie du stage dont je tire le plus. Tout ce qui suit — la veille, les fiches, les scénarios — n’a pas été demandé. C’est ce que j’ai décidé de produire.</p>
+    </div>
+
+    <div class="mission">
+      <h3>Prise en main de la plateforme</h3>
+      <p class="tag">Découverte produit · Cartographie du catalogue</p>
+      <p>Première étape, et la seule qui allait de soi : comprendre ce que vend l’entreprise. J’ai parcouru le module <em>Tronc Commun — sécurité réseau et automatisation défensive</em>, le parcours d’entrée du catalogue francophone, puis exploré l’ensemble de l’offre.</p>
+      <ul class="puces">
+        <li>Parcours du Tronc Commun et de ses sept leçons : empoisonnement DNS, interception d’identifiants sur le réseau interne, sécurisation d’une messagerie exposée, puis mise en pratique Python d’automatisation défensive.</li>
+        <li>Lecture de la structure du catalogue : des chapitres de deux à treize leçons couvrant un domaine, des cours plus courts sur un sujet précis, une difficulté et une progression affichées pour chaque entrée.</li>
+        <li>Repérage de la répartition linguistique — contenus longs en anglais, parcours d’entrée en français — et de ce qu’elle dit du double marché de l’entreprise.</li>
+        <li>Identification des domaines absents du catalogue francophone : administration réseau, traçabilité, chaîne de confiance des certificats.</li>
+      </ul>
+      <p>Ce travail paraît modeste, et il l’était. Mais c’est lui qui a rendu possible tout le reste : sans savoir ce que la plateforme couvrait déjà, je n’avais aucun moyen de proposer quoi que ce soit d’utile.</p>
+    </div>
+
+    <div class="mission">
+      <h3>Veille technologique</h3>
+      <p class="tag">Le cœur de mon activité · 5 fiches produites</p>
+      <p>C’est là que j’ai passé le plus de temps, et c’est le seul volet du poste où l’absence de consigne était un avantage plutôt qu’un obstacle : personne ne m’a donné de liste de sujets, donc je les ai choisis.</p>
+      <p>Cinq fiches, chacune reliée à une question concrète pour la plateforme. Le détail de la méthode et les documents sont dans la section suivante.</p>
+    </div>
+
+    <div class="mission">
+      <h3>Propositions de contenus</h3>
+      <p class="tag">Initiative personnelle · 4 fiches de cours, 6 scénarios</p>
+      <p>La veille produisait des constats. Il fallait en faire quelque chose. J’ai donc rédigé deux dossiers de propositions, en visant les manques que ma phase de découverte avait fait apparaître.</p>
+      <ul class="puces">
+        <li><strong>Quatre fiches de cours Python</strong> — boucles, listes, dictionnaires, lecture d’un fichier de journal — pour combler l’écart entre le cours d’introduction en trois leçons et la partie automatisation défensive du Tronc Commun.</li>
+        <li><strong>Six scénarios réseau et protocoles</strong> — SNMP, NTP, RDP, SMB, DHCP, certificats TLS — sur les domaines que le catalogue francophone ne couvrait pas.</li>
+      </ul>
+      <p>Ces documents sont des propositions, pas des contenus intégrés à la plateforme. Je les présente pour ce qu’ils sont : le travail que j’ai choisi de produire faute de commande, et la seule façon que j’aie trouvée de rendre ces deux mois utiles à quelqu’un d’autre qu’à moi.</p>
+    </div>
+
+    <div class="encadre vert">
+      <h4>Environnement et outils</h4>
+      <p>Un poste entièrement logiciel et entièrement à distance.</p>
+      <ul class="outils">
+        <li>Windows 11</li>
+        <li>Google Chrome</li>
+        <li>Python 3</li>
+        <li>Visual Studio Code</li>
+        <li>Markdown</li>
+        <li>Notion</li>
+        <li>Trello</li>
+        <li>Discord</li>
+        <li>WhatsApp</li>
+        <li>Courriel</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section id="cours">
+  <div class="col">
+    <h2>Contenus pédagogiques</h2>
+    <p class="deck">La difficulté d’une fiche de cours n’est pas technique. Elle est de résister à la tentation de tout dire.</p>
+
+    <p>Le catalogue comporte un cours « Introduction au Python » en trois leçons, qui pose les bases. Le module dont j’avais la charge se termine, lui, par une mise en pratique d’automatisation défensive — c’est-à-dire par du code appliqué à un cas réseau. Entre les deux, il manquait les notions intermédiaires. J’ai rédigé quatre fiches pour combler cet écart, calibrées pour un public débutant — niveau NSI, BTS SIO ou première année d’école. Le choix que j’ai défendu, et qui a structuré tout le dossier, est de ne pas les écrire comme des fiches indépendantes. Une notion isolée s’oublie ; une notion qui sert à la suivante se retient.</p>
+
+    <p>Les quatre fiches forment donc une progression. Les boucles permettent de parcourir, les listes fournissent ce qu’on parcourt, les dictionnaires font passer de « quels éléments » à « combien de fois », et la dernière fiche réunit les trois sur une donnée réelle : un fichier de journal d’authentification, analysé en une vingtaine de lignes. L’élève qui arrive au bout a écrit un outil, pas fait un exercice — et il est prêt pour la partie automatisation défensive du Tronc Commun.</p>
+
+    <h4>Les partis pris de rédaction</h4>
+    <ul class="puces">
+      <li><strong>Ouvrir sur le problème, pas sur la définition.</strong> Chaque fiche commence par une situation où la notion manque cruellement. La définition arrive après, comme réponse.</li>
+      <li><strong>Des exemples ancrés en cybersécurité.</strong> Compter des tentatives de connexion par adresse IP enseigne exactement le même dictionnaire que compter des fruits dans un panier, mais donne une raison de s’y intéresser.</li>
+      <li><strong>Une rubrique « erreurs fréquentes » systématique.</strong> Ce qui bloque un débutant, ce n’est presque jamais la notion : c’est le saut de ligne oublié, la borne exclue de <code>range</code>, la liste modifiée pendant qu’on la parcourt.</li>
+      <li><strong>Signaler les simplifications.</strong> Manipuler des mots de passe en clair rend une boucle lisible, mais ce n’est pas un modèle. Je le précise dans la fiche plutôt que de laisser passer un mauvais réflexe.</li>
+    </ul>
+
+    <div class="veilles">
+      <a class="veille" href="docs/fiches-de-cours-python.pdf" target="_blank" rel="noopener">
+        <span class="ref">FC-2026-PY · Progression Python</span>
+        <h3>Quatre fiches de cours Python</h3>
+        <p>Les boucles · Les listes · Les dictionnaires · Lire un fichier de journal. Pour chacune : objectifs d’apprentissage, prérequis, cours illustré de code commenté, erreurs fréquentes et exercices. La dernière fiche réunit les trois précédentes sur un journal d’authentification réel.</p>
+        <span class="ouvrir">Ouvrir le dossier (PDF, 13 pages)</span>
+      </a>
+    </div>
+
+    <div class="encadre">
+      <h4>Ce que la vulgarisation m’a coûté, et appris</h4>
+      <p>Je croyais que la partie difficile serait d’expliquer les dictionnaires. C’était de choisir quoi ne pas mettre. Ma première version de la fiche sur les listes couvrait le découpage, la copie, les listes de listes, les compréhensions et le tri — tout était juste, et l’ensemble était illisible pour quelqu’un qui découvre. J’ai supprimé la moitié.</p>
+      <p>C’est le même réflexe qu’a demandé la veille : écrire pour un lecteur qui n’a pas lu les mêmes sources que moi, et non pour prouver que je les ai lues. Les deux exercices ont fini par converger sur la même exigence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ SCÉNARIOS ══════════════════════════ -->
+<section id="scenarios">
+  <div class="col">
+    <h2>Conception de scénarios</h2>
+    <p class="deck">Écrire un scénario, c’est chercher la situation dans laquelle une notion abstraite devient une contrainte que le joueur doit lever lui-même.</p>
+
+    <p>Les scénarios du Tronc Commun portent tous sur l’interception de protocoles applicatifs : empoisonnement DNS, identifiants captés sur le réseau interne, messagerie non chiffrée. C’est un angle solide, et cohérent pour un parcours d’entrée. Mais en le parcourant, puis en passant en revue le reste du catalogue francophone, j’ai vu ce qu’il laissait de côté : l’administration du réseau, la traçabilité, et la chaîne de confiance des certificats.</p>
+
+    <p>J’ai donc rédigé, de ma propre initiative, un dossier de six situations complémentaires. Aucune ne met en scène un attaquant abstrait : chacune part d’une négligence ordinaire, du type qu’un élève peut reconnaître dans son propre établissement. Une supervision installée il y a six ans que personne n’a rouverte. Un port d’administration ouvert « le temps que ça se calme », deux ans plus tôt. Un avertissement de certificat que deux cents personnes cliquent chaque matin sans le lire.</p>
+
+    <h4>Les principes que je me suis fixés</h4>
+    <ul class="puces">
+      <li><strong>Faire constater avant d’expliquer.</strong> La théorie arrive après la démonstration, jamais avant. Un élève à qui l’on dit qu’un protocole est dangereux le note ; un élève qui voit ce qu’on en tire le retient.</li>
+      <li><strong>Une seule notion centrale par scénario</strong>, et des notions secondaires qui s’y rattachent naturellement. Un scénario qui enseigne quatre choses n’en enseigne aucune.</li>
+      <li><strong>Partir d’une négligence plausible</strong> plutôt que d’un scénario d’attaque spectaculaire. La faille la plus courante n’est pas une prouesse technique, c’est un raccourci pris un jour de urgence et jamais repris.</li>
+      <li><strong>Terminer par une remédiation vérifiable</strong>, pas par un questionnaire. Le joueur doit corriger, puis constater que la correction tient.</li>
+    </ul>
+
+    <div class="veilles">
+      <a class="veille" href="docs/scenarios-reseau-protocoles.pdf" target="_blank" rel="noopener">
+        <span class="ref">SC-2026-RES · Dossier de conception</span>
+        <h3>Six scénarios réseau et protocoles</h3>
+        <p>SNMP et la supervision qui trahit le réseau · NTP et la chronologie qu’on ne peut plus reconstituer · RDP exposé sur Internet · SMB et les partages hérités · DHCP pirate · certificats et lassitude face aux alertes. Pour chacun : mise en situation, rôle, progression, notions mobilisées et critères de validation.</p>
+        <span class="ouvrir">Ouvrir le dossier (PDF, 7 pages)</span>
+      </a>
+    </div>
+
+    <div class="encadre">
+      <h4>Ce que la conception m’a appris</h4>
+      <p>Définir soi-même les critères de validation d’un exercice change le regard qu’on porte sur ceux des autres. On voit ce qui manque : une étape sans condition de sortie claire, un énoncé qui laisse deux interprétations possibles, une question d’examen qui porte sur une notion à peine effleurée dans le contenu.</p>
+      <p>C’est aussi l’exercice qui m’a demandé le plus de travail technique. Écrire un scénario crédible sur SNMP ou sur le DHCP suppose de comprendre le protocole assez bien pour savoir ce qu’un attaquant peut réellement en faire, et pas seulement pour en réciter la définition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ VEILLE ══════════════════════════ -->
+<section id="veille">
+  <div class="col">
+    <h2>Veille technologique</h2>
+    <p class="deck">Un volet du stage à part entière, et celui que j’ai le plus choisi : suivre l’actualité de la sécurité, puis en tirer ce qui devait changer dans nos contenus.</p>
+
+    <p>Une plateforme qui enseigne la cybersécurité vieillit vite. Un module qui présentait RSA comme une solution durable ou qui apprenait à repérer un courriel frauduleux à ses fautes d’orthographe n’est pas seulement daté : il transmet un réflexe faux. La veille n’était donc pas un exercice scolaire posé à côté du travail, elle en était une entrée.</p>
+
+    <h4>Ma méthode</h4>
+    <ul class="puces">
+      <li>Suivi régulier de sources primaires en priorité — publications de l’ANSSI, standards du NIST, rapports d’éditeurs de sécurité — plutôt que d’agrégateurs.</li>
+      <li>Recoupement systématique de toute information marquante sur au moins trois sources indépendantes avant de la retenir.</li>
+      <li>Distinction explicite, dans chaque fiche, entre le fait technique vérifiable et le chiffre communiqué par un acteur commercialement intéressé.</li>
+      <li>Restitution sous un format fixe : contexte, points à retenir, explication technique, puis conséquences concrètes pour nos contenus.</li>
+    </ul>
+
+    <p>Ce dernier point est celui auquel je tiens le plus. Une veille qui s’arrête au résumé d’actualité ne sert à personne. Chaque fiche se termine donc par ce qu’il faudrait modifier, ajouter ou corriger sur la plateforme.</p>
+    <p>Cinq fiches ont été produites sur la durée du stage. L’une d’elles a d’ailleurs modifié ma façon de travailler plutôt que nos contenus : en étudiant les extensions de navigateur, j’ai compris qu’une extension capable d’injecter du script dans une page pouvait produire une anomalie qui n’existe pas dans le produit. C’est ce qui a transformé la navigation privée, que j’utilisais par réflexe, en condition de test explicitement documentée dans mes rapports.</p>
+
+    <div class="veilles">
+      <a class="veille" href="docs/veille-01-post-quantique-anssi.pdf" target="_blank" rel="noopener">
+        <span class="ref">VT-2026-01 · 22 juin 2026 · Cryptographie</span>
+        <h3>L’ANSSI ferme la porte au chiffrement non post-quantique</h3>
+        <p>L’annonce du 16 juin 2026 transforme une recommandation en condition d’accès au marché. Ce qui casse avec Shor, ce qui tient avec Grover, les trois standards du NIST, et pourquoi « harvest now, decrypt later » rend l’urgence immédiate.</p>
+        <span class="ouvrir">Ouvrir la fiche (PDF, 3 pages)</span>
+      </a>
+      <a class="veille" href="docs/veille-02-phishing-ia-aitm.pdf" target="_blank" rel="noopener">
+        <span class="ref">VT-2026-02 · 8 juillet 2026 · Ingénierie sociale</span>
+        <h3>Phishing assisté par IA : nos repères de détection sont périmés</h3>
+        <p>La faute d’orthographe ne trie plus rien, et l’attaque AiTM contourne le MFA sans jamais l’attaquer — elle vole le cookie de session émis après une authentification réussie. Ce qui reste efficace, et ce que nos exercices enseignent de faux.</p>
+        <span class="ouvrir">Ouvrir la fiche (PDF, 3 pages)</span>
+      </a>
+      <a class="veille" href="docs/veille-04-injection-de-prompt.pdf" target="_blank" rel="noopener">
+        <span class="ref">VT-2026-04 · 10 juillet 2026 · Intelligence artificielle</span>
+        <h3>Injection de prompt : la faille que personne ne sait refermer</h3>
+        <p>Instructions et données partagent le même canal, et il n’existe pas d’équivalent de la requête préparée. Toutes les défenses abaissent la probabilité, aucune ne l’annule. Conséquence directe pour le mentor IA qui accompagne le joueur pendant la partie.</p>
+        <span class="ouvrir">Ouvrir la fiche (PDF, 3 pages)</span>
+      </a>
+      <a class="veille" href="docs/veille-05-extensions-navigateur.pdf" target="_blank" rel="noopener">
+        <span class="ref">VT-2026-05 · 15 juillet 2026 · Navigateur</span>
+        <h3>Extensions de navigateur : quand la confiance change de mains</h3>
+        <p>Une extension saine peut devenir hostile par rachat ou compromission du compte développeur, sans que l’utilisateur en soit averti. Ce sujet a eu une conséquence directe sur ma propre méthode de test.</p>
+        <span class="ouvrir">Ouvrir la fiche (PDF, 3 pages)</span>
+      </a>
+      <a class="veille" href="docs/veille-03-supply-chain-pypi.pdf" target="_blank" rel="noopener">
+        <span class="ref">VT-2026-03 · 25 juillet 2026 · Chaîne d’approvisionnement</span>
+        <h3>PyPI, fichiers .pth et slopsquatting : le pip install n’est plus anodin</h3>
+        <p>Une charge utile qui s’exécute au démarrage de l’interpréteur sans que le paquet soit importé, et dont l’empreinte pip reste valide. Le sujet touche directement nos exercices, qui font installer des paquets à des débutants.</p>
+        <span class="ouvrir">Ouvrir la fiche (PDF, 4 pages)</span>
+      </a>
+    </div>
+
+    <div class="encadre carmin">
+      <h4>Un exemple de veille devenue utile</h4>
+      <p>L’annonce de l’ANSSI est tombée le 16 juin, en pleine période de stage. Nos deux jeux sur la cryptographie présentaient RSA comme un choix sûr sans réserve. Ce n’est pas faux aujourd’hui, mais ce n’est plus vrai pour demain — et l’écart entre les deux est précisément ce qu’un élève de terminale devrait comprendre. J’ai proposé une reformulation des énoncés et une étape supplémentaire sur les suites hybrides. C’est le moment où la veille a cessé d’être une lecture pour devenir une proposition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ ÉQUIPE ══════════════════════════ -->
+<section id="equipe">
+  <div class="col">
+    <h2>Équipe, hiérarchie et organisation du travail</h2>
+    <p class="deck">Une chaîne hiérarchique d’un seul échelon, deux canaux de communication, et une leçon que je n’attendais pas.</p>
+
+    <h3>Mon rattachement</h3>
+    <p>J’étais directement rattaché à Armand Taheri, fondateur et directeur général de la société. Il n’y avait aucun échelon intermédiaire : dans une structure de cette taille, le tuteur de stage est aussi la personne qui dirige l’entreprise, arbitre les priorités produit et rencontre les clients.</p>
+    <p>C’est un rattachement qui présente un avantage théorique — une question posée arrive directement au décideur — et un inconvénient très concret, que j’ai découvert en pratique : cette personne est aussi la plus occupée de l’organisation.</p>
+
+    <div class="orga">
+      <div class="niv"><span class="qui">Armand Taheri</span><span class="quoi">Fondateur et directeur général — tuteur de stage</span></div>
+      <div class="niv"><span class="qui moi">Sami El Abdallaoui</span><span class="quoi">Stagiaire — veille et contenus, en télétravail intégral</span></div>
+      <div class="niv"><span class="qui">Équipe technique et pédagogique</span><span class="quoi">Distribuée, peu d’interactions directes sur la période</span></div>
+    </div>
+
+    <h3>Les canaux</h3>
+    <ul class="puces">
+      <li><strong>WhatsApp</strong> pour le fil courant : questions, points de blocage, messages courts. Réponse asynchrone, parfois différée d’un jour.</li>
+      <li><strong>Le courriel</strong> pour ce qui devait laisser une trace : livraison de documents, propositions écrites.</li>
+      <li><strong>Discord</strong> pour le canal d’équipe, que j’ai surtout consulté sans y intervenir beaucoup.</li>
+    </ul>
+
+    <h3>Le rythme réel</h3>
+    <p>Il faut décrire les choses telles qu’elles ont été. Un point de cadrage au démarrage, quelques échanges ponctuels, et entre les deux de longues plages sans sollicitation. Je n’ai pas eu de réunion hebdomadaire, pas de point quotidien, pas de tâche affectée dans un outil de suivi.</p>
+    <p>Ce n’est pas un reproche. Une entreprise de dix personnes qui fournit des ministères, des universités et des clients grands comptes ne dispose pas d’un encadrant à temps partiel pour un stagiaire de deuxième année. Mais c’est une réalité qu’il faut nommer, parce qu’elle a déterminé la totalité de mon stage.</p>
+
+    <div class="encadre">
+      <h4>Ce que le distanciel non encadré change réellement</h4>
+      <p>En présentiel, même sans consigne, on absorbe du contexte : les conversations, les écrans des voisins, les réunions qu’on entend sans y participer. À distance, ce canal disparaît entièrement. Il ne reste que ce qui est écrit et explicitement adressé — et quand rien n’est écrit, il ne reste rien.</p>
+      <p>J’en tire une règle que je n’avais pas avant : dans une petite structure, un stagiaire n’est pas encadré, il est hébergé. La différence est qu’il faut arriver avec des propositions plutôt qu’avec des questions. Une question demande du temps à quelqu’un qui n’en a pas ; une proposition ne demande qu’un avis, et elle en obtient un.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ COMPÉTENCES ══════════════════════════ -->
+<section id="competences">
+  <div class="col">
+    <h2>Compétences mobilisées</h2>
+    <p class="deck">Dans un stage sans commande, l’autonomie cesse d’être une qualité annexe : c’est la condition pour qu’il se passe quoi que ce soit.</p>
+
+    <h3>Autonomie</h3>
+    <p>C’est la compétence que ce stage a réellement exercée, et elle ne s’est pas manifestée comme je l’imaginais. Je croyais que l’autonomie consistait à exécuter une tâche sans qu’on me tienne la main. J’ai découvert qu’elle consiste d’abord à décider quelle tâche existe.</p>
+    <p>Concrètement : choisir les sujets de veille, fixer un rythme de production, m’imposer un format de restitution, et livrer des documents finis plutôt que des notes. Personne n’a validé ce programme avant que je le commence, et personne ne l’a réclamé pendant.</p>
+
+    <h3>Curiosité</h3>
+    <p>Le volet veille était entièrement ouvert. J’ai suivi la cryptographie post-quantique après l’annonce de l’ANSSI du 16 juin, tombée en plein milieu du stage. Je me suis intéressé aux compromissions de paquets PyPI parce que les exercices de la plateforme font installer des dépendances à des débutants sans aucune précaution.</p>
+    <p>Sur le fichier <code>.pth</code>, je suis allé au-delà de ce qu’exigeait la fiche : je ne comprenais pas comment du code pouvait s’exécuter sans import, et je suis allé lire la documentation du module <code>site</code> de Python pour en avoir le cœur net. C’est cette vérification qui m’a permis d’expliquer le mécanisme plutôt que de le recopier.</p>
+
+    <h3>Créativité</h3>
+    <p>Écrire un scénario pédagogique, c’est chercher la situation dans laquelle une notion abstraite devient une contrainte concrète. Expliquer qu’un protocole non chiffré est risqué ne produit rien. Mettre un joueur dans la position de quelqu’un qui voit passer les identifiants de ses collègues en clair et qui doit décider quoi faire produit une compréhension.</p>
+    <p>Même exigence pour la vulgarisation : trouver l’angle qui rend une notion accessible sans la déformer. Le concept de « harvest now, decrypt later » fait saisir l’urgence du post-quantique à un lycéen sans écrire une ligne de mathématiques.</p>
+
+    <h3>Compétences techniques développées</h3>
+    <ul class="puces">
+      <li><strong>Cybersécurité</strong> — cryptographie post-quantique et standards du NIST, ingénierie sociale assistée par IA et attaque AiTM, sécurité de la chaîne d’approvisionnement logicielle, injection de prompt, modèle de permissions du navigateur.</li>
+      <li><strong>Python pédagogique</strong> — boucles, listes, dictionnaires, manipulation de fichiers, au niveau requis pour les enseigner, ce qui est plus exigeant que de savoir s’en servir.</li>
+      <li><strong>Protocoles et administration</strong> — SNMP, NTP, RDP, SMB, DHCP, TLS et chaîne de certification, travaillés pour construire des scénarios crédibles.</li>
+      <li><strong>Méthode de veille</strong> — priorité aux sources primaires, recoupement systématique, distinction entre le fait technique et le chiffre communiqué par un acteur intéressé.</li>
+      <li><strong>Rédaction technique</strong> — écrire pour un lecteur qui ne partage pas mon contexte, en français comme en anglais.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════════════ BILAN ══════════════════════════ -->
+<section id="bilan">
+  <div class="col">
+    <h2>Bilan personnel</h2>
+    <p class="deck">Je n’ai pas eu le stage que j’imaginais. C’est ce qui le rend intéressant à raconter, et c’est ce que j’en ai retenu de plus utile.</p>
+
+    <h3>Mon ressenti sur l’expérience</h3>
+    <p>Je suis arrivé en attendant qu’on m’intègre à une équipe, qu’on me confie des tâches et qu’on me corrige. C’est l’image du stage qu’on se fait à vingt ans, et elle suppose une organisation capable d’encadrer. OpenCyberAI est une entreprise de dix personnes dirigée par son fondateur, qui vend à des ministères et à des universités. Cette organisation n’existait pas.</p>
+    <p>Les premières semaines ont été inconfortables. J’ai attendu, j’ai relancé, j’ai attendu encore. J’ai passé du temps à me demander si le silence signifiait qu’on avait oublié le stagiaire, ou si on jugeait mon travail insuffisant. Aucune des deux hypothèses n’était la bonne : il n’y avait simplement personne de disponible.</p>
+
+    <div class="temoin">Dans une petite structure, un stagiaire n’est pas encadré. Il est hébergé. À lui de décider ce qu’il fait de la place qu’on lui laisse.</div>
+
+    <h3>La difficulté du stage : l’absence de commande</h3>
+    <p>La difficulté que j’ai rencontrée n’est pas technique. Elle tient en une phrase : <strong>personne ne m’a dit quoi faire, et j’ai mis dix jours à comprendre que personne n’allait le faire.</strong></p>
+    <p>Ces dix jours, je les ai passés dans une attitude d’attente. Je consultais la plateforme, je relisais les contenus, je préparais des questions. Mon raisonnement était que je ne pouvais pas décider seul de ce sur quoi travailler, parce que je ne connaissais ni les priorités de l’entreprise ni ce qui était déjà en cours. C’était vrai, et c’était un mauvais raisonnement : je pouvais interroger la plateforme elle-même, qui est publique, et en déduire beaucoup.</p>
+    <p>Le déclic est venu d’un constat simple, fait en parcourant le catalogue : plusieurs domaines n’y figuraient pas, et le cours d’introduction à Python s’arrêtait bien avant le niveau que demandait la partie automatisation du Tronc Commun. Ce n’était pas une commande, mais c’était un manque identifiable. Et un manque identifiable, on peut le combler sans autorisation.</p>
+
+    <h4>Ce que j’ai changé</h4>
+    <ul class="puces">
+      <li>J’ai arrêté d’envoyer des questions et j’ai commencé à envoyer des propositions. Une question demande du temps à quelqu’un qui n’en a pas ; une proposition ne demande qu’un avis.</li>
+      <li>Je me suis imposé un rythme de production et un format fixe, pour ne pas dépendre d’une validation extérieure afin d’avancer.</li>
+      <li>J’ai décidé de ne livrer que des documents finis. Une note personnelle ne prouve rien et ne sert à personne ; une fiche complète peut être lue, jugée, utilisée ou refusée.</li>
+      <li>J’ai choisi mes sujets de veille à partir de ce que faisait l’entreprise, et non de ce qui m’intéressait le plus, pour que le travail ait une chance de servir.</li>
+    </ul>
+
+    <h4>Ce que cela dit de moi</h4>
+    <p><strong>Ma faiblesse.</strong> J’ai attendu trop longtemps. J’ai interprété une absence d’instruction comme une instruction d’attendre, alors que c’était un vide. J’ai aussi manqué de courage au départ : proposer quelque chose, c’est risquer qu’on le trouve mauvais, tandis qu’attendre ne fait courir aucun risque immédiat — sauf celui de perdre deux mois. C’est un réflexe que je reconnais aussi dans mes projets scolaires, où j’attends volontiers la consigne exacte avant de commencer.</p>
+    <p><strong>Ma force.</strong> Une fois la décision prise, je m’y suis tenu sans avoir besoin qu’on me relance. J’ai produit quinze documents en un peu plus d’un mois — cinq fiches de veille, quatre fiches de cours, six scénarios — avec un format constant et un niveau d’exigence que je ne me connaissais pas. Je travaille bien sans surveillance, à condition d’avoir décidé moi-même de l’objectif.</p>
+
+    <h3>Ma progression sur les deux mois</h3>
+    <ul class="puces">
+      <li><strong>Sur l’initiative</strong> — c’est le progrès principal, et il est concret : je sais désormais transformer un constat en proposition écrite, au lieu d’attendre qu’on me confirme que le constat est pertinent.</li>
+      <li><strong>Sur la veille</strong> — j’ai une méthode que je n’avais pas : sources primaires d’abord, recoupement systématique, et distinction explicite entre le fait technique et le chiffre produit par un acteur commercialement intéressé.</li>
+      <li><strong>Sur les connaissances</strong> — j’ai travaillé cinq sujets de sécurité en profondeur, dont trois que je ne connaissais pas du tout en arrivant : l’attaque AiTM, l’injection de prompt, et le mécanisme des fichiers <code>.pth</code> en Python.</li>
+      <li><strong>Sur l’écrit</strong> — écrire un cours pour un débutant m’a appris à supprimer. Ma première version de la fiche sur les listes couvrait tout et n’était lisible par personne ; j’en ai retiré la moitié.</li>
+      <li><strong>Sur le regard professionnel</strong> — je comprends mieux ce qu’est une petite entreprise en croissance : des ambitions et des références qui dépassent largement ses moyens humains, et un quotidien qui consiste surtout à arbitrer ce qu’on ne fera pas.</li>
+    </ul>
+
+    <div class="encadre">
+      <h4>Ce que je ferais différemment</h4>
+      <p>Je poserais la question du programme dès le premier jour, par écrit, avec une proposition déjà rédigée. Non pas « que dois-je faire ? », mais « voici ce que je compte faire les deux premières semaines, dites-moi si ça vous va ». La réponse aurait pris trente secondes à mon tuteur, et j’aurais gagné dix jours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ PROJET PRO ══════════════════════════ -->
+<section id="projet">
+  <div class="col">
+    <h2>Impact sur mon projet professionnel</h2>
+
+    <p>J’abordais ce stage avec une idée assez conventionnelle de la cybersécurité : le test d’intrusion, l’analyse en centre de supervision, le côté offensif. C’est l’image que renvoie le métier vu de l’extérieur, et c’est celle que j’avais en tête en arrivant.</p>
+    <p>Deux mois passés à chercher méthodiquement ce qui casse dans un produit, à le documenter et à écrire du contenu autour l’ont un peu déplacée. J’ai découvert que la partie du métier que je croyais ingrate — vérifier, documenter, reprendre — est celle où je travaille le mieux, et que la rigueur qu’elle demande est la même que celle du versant offensif. Un défaut de conception, une validation absente, un état non prévu : ce sont les mêmes objets, qu’on les cherche pour fiabiliser un produit ou pour l’attaquer.</p>
+    <p>Je n’en tire pas encore une spécialité. Je veux poursuivre en cybersécurité, et je préfère aborder le Bachelor 3 sans avoir tranché entre l’offensif, la défense opérationnelle et la sécurité applicative. Ce stage m’a surtout montré que ce choix se fera en pratiquant, pas en lisant des fiches métiers.</p>
+    <p>Deux choses que j’emporte quand même avec certitude :</p>
+    <ul class="puces">
+      <li>La veille comme pratique régulière et non comme exercice ponctuel. C’est l’habitude la plus transférable que ce stage m’a laissée, et la moins coûteuse à maintenir.</li>
+      <li>L’écrit comme compétence technique à part entière. Un constat que personne ne peut reproduire ne sert à rien, et une notion mal expliquée n’est pas enseignée.</li>
+    </ul>
+
+    <div class="pied">
+      <strong>Sami El Abdallaoui</strong>
+      Bachelor 2 Cybersécurité, Ynov Campus<br>
+      Stage chez OpenCyberAI — 1<sup>er</sup> juin au 31 juillet 2026<br>
+      <a href="mailto:sami.elabdallaoui@ynov.com">sami.elabdallaoui@ynov.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var liens = Array.prototype.slice.call(document.querySelectorAll('.index a'));
+  var cibles = liens.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if(!('IntersectionObserver' in window)) return;
+  var vus = new Set();
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ e.isIntersecting ? vus.add(e.target) : vus.delete(e.target); });
+    for(var i=0;i<cibles.length;i++){
+      if(vus.has(cibles[i])){
+        liens.forEach(function(a){ a.removeAttribute('aria-current'); });
+        liens[i].setAttribute('aria-current','true');
+        break;
+      }
+    }
+  }, {rootMargin:'-15% 0px -70% 0px', threshold:0});
+  cibles.forEach(function(c){ if(c) obs.observe(c); });
+})();
+</script>
+</body>
+</html>
